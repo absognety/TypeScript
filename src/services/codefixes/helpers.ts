@@ -97,11 +97,7 @@ namespace ts.codefix {
         optional: boolean,
         body: Block | undefined,
     ): MethodDeclaration | undefined {
-        const signatureDeclaration = <MethodDeclaration>checker.signatureToSignatureDeclaration(signature, SyntaxKind.MethodDeclaration, enclosingDeclaration, NodeBuilderFlags.SuppressAnyReturnType);
-        if (!signatureDeclaration) {
-            return undefined;
-        }
-
+        const signatureDeclaration = Debug.assertDefined(<MethodDeclaration>checker.signatureToSignatureDeclaration(signature, SyntaxKind.MethodDeclaration, enclosingDeclaration, NodeBuilderFlags.SuppressAnyReturnType | NodeBuilderFlags.ReturnResultIfError));
         signatureDeclaration.decorators = undefined;
         signatureDeclaration.modifiers = modifiers;
         signatureDeclaration.name = name;

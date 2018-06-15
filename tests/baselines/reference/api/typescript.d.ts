@@ -2764,11 +2764,12 @@ declare namespace ts {
         AllowEmptyTuple = 524288,
         AllowUniqueESSymbolType = 1048576,
         AllowEmptyIndexInfoType = 2097152,
+        ReturnResultIfError = 4194304,
         IgnoreErrors = 3112960,
-        InObjectTypeLiteral = 4194304,
-        InTypeAlias = 8388608,
-        InInitialEntityName = 16777216,
-        InReverseMappedType = 33554432
+        InObjectTypeLiteral = 8388608,
+        InTypeAlias = 16777216,
+        InInitialEntityName = 33554432,
+        InReverseMappedType = 67108864
     }
     enum TypeFormatFlags {
         None = 0,

@@ -3093,14 +3093,15 @@ namespace ts {
         AllowEmptyTuple                         = 1 << 19,
         AllowUniqueESSymbolType                 = 1 << 20,
         AllowEmptyIndexInfoType                 = 1 << 21,
+        ReturnResultIfError                     = 1 << 22,
 
         IgnoreErrors = AllowThisInObjectLiteral | AllowQualifedNameInPlaceOfIdentifier | AllowAnonymousIdentifier | AllowEmptyUnionOrIntersection | AllowEmptyTuple | AllowEmptyIndexInfoType,
 
         // State
-        InObjectTypeLiteral                     = 1 << 22,
-        InTypeAlias                             = 1 << 23,    // Writing type in type alias declaration
-        InInitialEntityName                     = 1 << 24,    // Set when writing the LHS of an entity name or entity name expression
-        InReverseMappedType                     = 1 << 25,
+        InObjectTypeLiteral                     = 1 << 23,
+        InTypeAlias                             = 1 << 24,    // Writing type in type alias declaration
+        InInitialEntityName                     = 1 << 25,    // Set when writing the LHS of an entity name or entity name expression
+        InReverseMappedType                     = 1 << 26,
     }
 
     // Ensure the shared flags between this and `NodeBuilderFlags` stay in alignment
